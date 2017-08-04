@@ -2,8 +2,6 @@ package com.sohacks.chatclient.sohackschatclient.Domain;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 
-import java.util.Date;
-
 /**
  * Created by r730819 on 8/4/17.
  */

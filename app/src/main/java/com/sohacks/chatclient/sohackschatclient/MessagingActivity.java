@@ -1,23 +1,23 @@
 package com.sohacks.chatclient.sohackschatclient;
 
-import android.content.Context;
 import android.content.DialogInterface;
-import android.os.Message;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.sohacks.chatclient.sohackschatclient.Domain.UserMessage;
-import com.sohacks.chatclient.sohackschatclient.Domain.UserMessageWrapper;
+import com.sohacks.chatclient.sohackschatclient.Domain.UserMessageArray;
 import com.sohacks.chatclient.sohackschatclient.Util.KeyboardUtility;
 import com.sohacks.chatclient.sohackschatclient.Util.RandomNumberGenerator;
 
@@ -47,6 +47,26 @@ public class MessagingActivity extends AppCompatActivity {
     private void createFirebaseConnections(){
         database = FirebaseDatabase.getInstance();
         messageReference = database.getReference("messages");
+
+        ValueEventListener messageListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+
+                UserMessageArray msgArray = new UserMessageArray(dataSnapshot);
+
+                for(UserMessage message : msgArray.messages){
+                    System.out.println(message.message);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+
+        messageReference.addValueEventListener(messageListener);
     }
 
     private void createButtonListeners(){
@@ -78,8 +98,6 @@ public class MessagingActivity extends AppCompatActivity {
             }
         }
     }
-
-
 
     private void sendMessageToFirebase(){
 
