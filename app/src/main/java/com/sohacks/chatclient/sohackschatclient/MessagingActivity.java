@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -16,6 +18,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.sohacks.chatclient.sohackschatclient.Adapters.MessageListViewAdapter;
 import com.sohacks.chatclient.sohackschatclient.Domain.UserMessage;
 import com.sohacks.chatclient.sohackschatclient.Domain.UserMessageArray;
 import com.sohacks.chatclient.sohackschatclient.Util.KeyboardUtility;
@@ -29,9 +32,11 @@ public class MessagingActivity extends AppCompatActivity {
     //Variables
     FirebaseDatabase database;
     DatabaseReference messageReference;
+    UserMessageArray messageArray;
 
     @BindView(R.id.message_text) EditText messageText;
     @BindView(R.id.send_button) Button sendButton;
+    @BindView(R.id.message_list_view) ListView messageListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +46,8 @@ public class MessagingActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         createFirebaseConnections();
         createButtonListeners();
-        setupUI(findViewById(R.id.message_parent));
+        attachCloseKeyBoardListeners(findViewById(R.id.message_parent));
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
     private void createFirebaseConnections(){
@@ -51,13 +57,8 @@ public class MessagingActivity extends AppCompatActivity {
         ValueEventListener messageListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
-
-                UserMessageArray msgArray = new UserMessageArray(dataSnapshot);
-
-                for(UserMessage message : msgArray.messages){
-                    System.out.println(message.message);
-                }
+                messageArray = new UserMessageArray(dataSnapshot);
+                setupListView();
             }
 
             @Override
@@ -78,7 +79,7 @@ public class MessagingActivity extends AppCompatActivity {
         });
     }
 
-    public void setupUI(View view) {
+    public void attachCloseKeyBoardListeners(View view) {
 
         // Set up touch listener for non-text box views to hide keyboard.
         if (!(view instanceof EditText)) {
@@ -94,9 +95,16 @@ public class MessagingActivity extends AppCompatActivity {
         if (view instanceof ViewGroup) {
             for (int i = 0; i < ((ViewGroup) view).getChildCount(); i++) {
                 View innerView = ((ViewGroup) view).getChildAt(i);
-                setupUI(innerView);
+                attachCloseKeyBoardListeners(innerView);
             }
         }
+    }
+
+    private void setupListView(){
+
+
+        messageListView.setAdapter(new MessageListViewAdapter(MessagingActivity.this, R.layout.message_adapter_list, messageArray.messages));
+        messageListView.setSelection(messageArray.messages.size());
     }
 
     private void sendMessageToFirebase(){

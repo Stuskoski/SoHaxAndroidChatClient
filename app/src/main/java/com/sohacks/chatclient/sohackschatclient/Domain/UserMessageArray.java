@@ -1,10 +1,11 @@
 package com.sohacks.chatclient.sohackschatclient.Domain;
 
-import android.support.constraint.solver.widgets.Snapshot;
-
 import com.google.firebase.database.DataSnapshot;
+import com.sohacks.chatclient.sohackschatclient.Util.MessagesComparator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * Created by r730819 on 8/4/17.
@@ -26,6 +27,8 @@ public class UserMessageArray {
             messages.add(child.getValue(UserMessage.class));
         }
 
+        Collections.sort(messages, new MessagesComparator());
+
     }
 
     public UserMessageArray(ArrayList<UserMessage> messages) {
@@ -33,3 +36,5 @@ public class UserMessageArray {
     }
 
 }
+
+

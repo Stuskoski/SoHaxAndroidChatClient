@@ -9,6 +9,7 @@ import android.view.inputmethod.InputMethodManager;
 
 public class KeyboardUtility {
 
+    // Attaches an event to hide the soft keyboard
     public static void hideSoftKeyboard(Activity activity) {
         InputMethodManager inputMethodManager =
                 (InputMethodManager) activity.getSystemService(

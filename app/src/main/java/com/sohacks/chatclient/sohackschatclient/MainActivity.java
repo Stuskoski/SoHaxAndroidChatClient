@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.firebase.FirebaseApp;
 import com.sohacks.chatclient.sohackschatclient.Domain.UserInformation;
 
 import butterknife.BindView;
