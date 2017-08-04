@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "450039977050",
+    "firebase_url": "https://chatclientexample.firebaseio.com",
+    "project_id": "chatclientexample",
+    "storage_bucket": "chatclientexample.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450039977050:android:9f30e4f3d0c08481",
+        "android_client_info": {
+          "package_name": "com.workshop.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450039977050-28u46qjdir8ml2eqlkhkl68a4nt5iq3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGi5vS0MIZ9zMfzvrx923ZLeuaiOTZnrU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450039977050:android:f31262d26a15167b",
+        "android_client_info": {
+          "package_name": "com.sohacks.chatclient.sohackschatclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450039977050-28u46qjdir8ml2eqlkhkl68a4nt5iq3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGi5vS0MIZ9zMfzvrx923ZLeuaiOTZnrU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

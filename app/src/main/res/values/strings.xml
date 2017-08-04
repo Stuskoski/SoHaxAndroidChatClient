@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SoHacksChatClient</string>
+    <string name="username_placeholder">Enter Username</string>
+</resources>

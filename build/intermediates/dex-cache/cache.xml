@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/091d09f9097339f2187cbaf1ba5df44c6ff14853/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_671f528212bfea0df86acb926cb9db8b17719531/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/0e5f8fa33390aa9c82de39ceab5c0b969f2c8e23/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_47d39e7b10f26576608b3b516f492f47332c7116/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/1a6fc5bcfab616d5ad322f456cc532a220b27eae/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7c24e2e9773fb498e390ce973db382c3ddcf748e">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_93bcabddc620dd6a0555d29ae682d61e9718f9ec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/07ea6a5758c2d3dca320626850c2fe581df0ad8a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8229157f36f1d6395a2d991fe31a7d8df16fd764/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/36d8ad5a7a59063744010e1e199ac9dd3ad5bc50/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2f61564f5008fb7f14568c0c0c4d32dbd092eda5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/af0ad2597860514114c64b7efefc2311b2b897e0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="1b12397bc9f342b29d9e9108978828f99a6da579">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2d228549d9733b7d2babf8e8e66db12c69ba2e88/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-26.0.0-alpha1_8d1ae0d7e576dfab7c3b9977a1405c4c6efc1a25/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/9a44edd4c9dd710d01d7c30136d9b8a634ad77b8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f607b0fc7ec6c6b045be8e1c1f30e1a733668784/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/18abbb58016141ccdce1727fcad1d27d053bdb19/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_619b70b4b236ced7feffec378a8ec4d7d38d317e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/f5e6c4b23903140731990e318b6169fb7ca77c65/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="ed87ccdcb70c17d71ba4e6e4ac16afa62d3c49fb">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4782338b03ea0739238dfcafe66ba96a009772c2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2fc722bc1f8462ff6b53621a56acb8ea11def767">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b69ec192cb2d09dff15deadd1ad1d650767326b9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/d1e672354076c393ef28537ddd47e76de4c06f6b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_79a105d07e2efb5c915fe21027e83a1324f324b1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/db22044c4d03ed6a2ed21a3b66ddb6351795d4a7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="43e9789bd3240271265ab30ce1be9f224843f5a8">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f0187c6f20b0e66b5463740332eade07d8f4b9d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/59742a02450eba41d7884956659c60f678c3eadf/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e1625e48a836779b5fa141d22e5d05563aaccc9a">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f0e7f82d457b267f7c720bb70165cce765850e79/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/197c1fc30135a3cb8ce859fcd7a37628024e8fdc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a264d05d24a8f9312d9c5c8f00cdaf0dd20fed27/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/1b33071a9d2b56ea0e6ef0277bb3bfcf0f4a4346/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e5b429c146094a612134910688d169ec08deeefb">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e4d45efc13a2eda0c51bde4dc9da8dbcec2424a1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/ebf22d221c74f45cc3bc561acf44e7977aee5b8b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_39092d68265a3e79c915130568219bc1aeb0e623/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/3f3d8912701b6e00dec9d08147174321ca37bd93/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9e0295291ff786e40e3c5ad2f3ca86e8203ff1e7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/.android/build-cache/de7fde737882379c1fc4487ef43cc57cca4aadce/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_76cd75e8c5619592541ea6826bdc5e8c9aa31e48/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/r730819/Documents/AndroidStudioProjects/SoHacksChatClient/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3a2f8fee53403d469d04b97285230fdaf5be9b6d/classes.dex" />
+    </item>
+
+</items>
