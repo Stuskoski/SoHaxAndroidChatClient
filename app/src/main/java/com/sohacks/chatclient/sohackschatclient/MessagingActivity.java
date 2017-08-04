@@ -24,6 +24,8 @@ import com.sohacks.chatclient.sohackschatclient.Domain.UserMessageArray;
 import com.sohacks.chatclient.sohackschatclient.Util.KeyboardUtility;
 import com.sohacks.chatclient.sohackschatclient.Util.RandomNumberGenerator;
 
+import java.util.Date;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -51,6 +53,10 @@ public class MessagingActivity extends AppCompatActivity {
         setTitle("Chat Lobby");
     }
 
+    /**
+     * Creates the firebase references as well as creates the listeners and
+     * attaches them.
+     */
     private void createFirebaseConnections(){
         database = FirebaseDatabase.getInstance();
         messageReference = database.getReference("messages");
@@ -64,13 +70,16 @@ public class MessagingActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
+                finish();
             }
         };
 
         messageReference.addValueEventListener(messageListener);
     }
 
+    /**
+     * Creates button listeners
+     */
     private void createButtonListeners(){
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +89,14 @@ public class MessagingActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Recursively traverses all views and attaches listeners
+     * to them to close the keyboard.
+     *
+     * Only attached if they are not edit text views.
+     *
+     * @param view View to attach to
+     */
     public void attachCloseKeyBoardListeners(View view) {
 
         // Set up touch listener for non-text box views to hide keyboard.
@@ -101,6 +118,11 @@ public class MessagingActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Sets up the list view by giving it the context, layout, and messages array list
+     *
+     * Sets the selection to the last index after populating list.
+     */
     private void setupListView(){
 
 
@@ -108,11 +130,15 @@ public class MessagingActivity extends AppCompatActivity {
         messageListView.setSelection(messageArray.messages.size());
     }
 
+    /**
+     * Sends the message to firebase by creating the object
+     * with identifier and sending it on it's way.
+     */
     private void sendMessageToFirebase(){
 
         if(validateMessage()){
 
-            String newChild = String.format("%d", new RandomNumberGenerator().generateMessageID());
+            String newChild = String.format("%d-%d", new Date(), new RandomNumberGenerator().generateMessageID());
 
             messageReference
                     .child(newChild)
@@ -121,10 +147,14 @@ public class MessagingActivity extends AppCompatActivity {
             messageText.setText("");
 
         }else{
-            displayInvalidUsernameAlert();
+            displayInvalidMessageAlert();
         }
     }
 
+    /**
+     * Validates the message by simply checking if it is empty
+     * @return Boolean if not empty
+     */
     private boolean validateMessage(){
         String message = messageText.getText().toString();
 
@@ -135,7 +165,10 @@ public class MessagingActivity extends AppCompatActivity {
         return true;
     }
 
-    private void displayInvalidUsernameAlert(){
+    /**
+     * Displays a simple ok alert for an invalid message
+     */
+    private void displayInvalidMessageAlert(){
         AlertDialog alertDialog = new AlertDialog.Builder(MessagingActivity.this).create();
         alertDialog.setTitle("Invalid Message");
         alertDialog.setMessage("A message must not be empty.");

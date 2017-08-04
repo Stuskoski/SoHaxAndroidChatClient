@@ -11,6 +11,7 @@ import java.util.Comparator;
 public class MessagesComparator implements Comparator<UserMessage>{
 
 
+    //Comparator to sort messages by date
     @Override
     public int compare(UserMessage first, UserMessage second) {
         return Long.compare(first.timeStamp, second.timeStamp);

@@ -4,7 +4,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.sohacks.chatclient.sohackschatclient.Util.MessagesComparator;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 /**

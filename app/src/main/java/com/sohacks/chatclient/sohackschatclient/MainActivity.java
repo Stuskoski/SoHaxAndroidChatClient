@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
         createButtonListeners();
     }
 
-    //Creates the button listeners to proceed to next page
+    /**
+     * Creates the button listeners to proceed to next page
+     */
     public void createButtonListeners(){
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //Saves the username to memory if it was validated correctly
+    /**
+     * Saves the username to memory if it was validated correctly
+     */
     public void saveUserNameAndProceed(){
         if(validateName()){
             UserInformation.username = mainEditText.getText().toString();
@@ -50,13 +54,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //Validate the username to make sure it is ok to proceed
+    /**
+     * Validate the username to make sure it is ok to proceed
+     * @return Boolean if length not zero
+     */
     private boolean validateName(){
         String name = mainEditText.getText().toString();
         return !(name.length() == 0);
     }
 
-    //Displays a static alert dialog to info user of invalid username
+    /**
+     * Displays a static alert dialog to info user of invalid username
+     */
     private void displayInvalidUsernameAlert(){
         AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
         alertDialog.setTitle("Invalid Username");
@@ -70,7 +79,9 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
-    //Proceeds to the next screen
+    /**
+     * Proceeds to the next screen
+     */
     private void proceedToMessageScreen(){
         Intent intent = new Intent(this, MessagingActivity.class);
         startActivity(intent);
