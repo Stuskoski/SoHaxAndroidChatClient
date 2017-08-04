@@ -48,6 +48,7 @@ public class MessagingActivity extends AppCompatActivity {
         createButtonListeners();
         attachCloseKeyBoardListeners(findViewById(R.id.message_parent));
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+        setTitle("Chat Lobby");
     }
 
     private void createFirebaseConnections(){

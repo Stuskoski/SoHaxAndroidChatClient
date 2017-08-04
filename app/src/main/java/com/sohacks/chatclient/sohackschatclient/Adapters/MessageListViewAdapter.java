@@ -56,9 +56,9 @@ public class MessageListViewAdapter extends ArrayAdapter<UserMessage> {
             DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
             String reportDate = df.format(date);
 
-            usernameTextView.setText(message.user);
             timestampTextView.setText(reportDate);
-            messageTextView.setText(message.message);
+            usernameTextView.setText("User: " + message.user);
+            messageTextView.setText("Message: " + message.message);
 
         }
 
