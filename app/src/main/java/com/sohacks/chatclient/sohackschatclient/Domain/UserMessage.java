@@ -4,6 +4,8 @@ import com.google.firebase.database.IgnoreExtraProperties;
 
 /**
  * Created by r730819 on 8/4/17.
+ *
+ * UserMessage object for firebase
  */
 
 @IgnoreExtraProperties
@@ -22,5 +24,4 @@ public class UserMessage {
         this.timeStamp = System.currentTimeMillis();
         this.user = UserInformation.username;
     }
-
 }

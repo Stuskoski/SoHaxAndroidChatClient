@@ -20,6 +20,8 @@ import butterknife.ButterKnife;
 
 /**
  * Created by r730819 on 8/4/17.
+ *
+ * Custom adapter for user messages list
  */
 
 public class MessageListViewAdapter extends ArrayAdapter<UserMessage> {

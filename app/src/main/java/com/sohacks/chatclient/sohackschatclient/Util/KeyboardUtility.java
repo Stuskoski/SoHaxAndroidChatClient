@@ -17,5 +17,4 @@ public class KeyboardUtility {
         inputMethodManager.hideSoftInputFromWindow(
                 activity.getCurrentFocus().getWindowToken(), 0);
     }
-
 }

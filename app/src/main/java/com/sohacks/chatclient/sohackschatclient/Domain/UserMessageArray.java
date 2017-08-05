@@ -1,6 +1,7 @@
 package com.sohacks.chatclient.sohackschatclient.Domain;
 
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.IgnoreExtraProperties;
 import com.sohacks.chatclient.sohackschatclient.Util.MessagesComparator;
 
 import java.util.ArrayList;
@@ -8,8 +9,11 @@ import java.util.Collections;
 
 /**
  * Created by r730819 on 8/4/17.
+ *
+ * Array for UserMessages.  Firebase object.
  */
 
+@IgnoreExtraProperties
 public class UserMessageArray {
 
     public ArrayList<UserMessage> messages;
@@ -33,7 +37,6 @@ public class UserMessageArray {
     public UserMessageArray(ArrayList<UserMessage> messages) {
         this.messages = messages;
     }
-
 }
 
 

@@ -10,7 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.sohacks.chatclient.sohackschatclient.Domain.UserInformation;
+import com.sohacks.chatclient.sohackschatclient.Util.StringValidator;
 
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -18,8 +20,18 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.main_edit_text) EditText mainEditText;
     @BindView(R.id.main_continue_btn) Button continueButton;
+    @BindString(R.string.invalid_username_title) String invalidUsernameTitle;
+    @BindString(R.string.invalid_username_string) String invalidUsernameString;
+    @BindString(R.string.ok_string) String okString;
 
-
+    /**
+     * On create called when the activity is
+     * instantiated for the first time
+     *
+     * Very similar to the main method
+     * @param savedInstanceState If the view is refreshed, information is
+     *                           stored in this bundle.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
      * Saves the username to memory if it was validated correctly
      */
     public void saveUserNameAndProceed(){
-        if(validateName()){
+        if(StringValidator.validateStringForEmpty(mainEditText.getText().toString())){
             UserInformation.username = mainEditText.getText().toString();
             proceedToMessageScreen();
         }else{
@@ -53,24 +65,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    /**
-     * Validate the username to make sure it is ok to proceed
-     * @return Boolean if length not zero
-     */
-    private boolean validateName(){
-        String name = mainEditText.getText().toString();
-        return !(name.length() == 0);
-    }
-
     /**
      * Displays a static alert dialog to info user of invalid username
      */
     private void displayInvalidUsernameAlert(){
         AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
-        alertDialog.setTitle("Invalid Username");
-        alertDialog.setMessage("A valid username must be entered to proceed");
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+        alertDialog.setTitle(invalidUsernameTitle);
+        alertDialog.setMessage(invalidUsernameString);
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, okString,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -86,6 +88,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MessagingActivity.class);
         startActivity(intent);
     }
-
-
 }

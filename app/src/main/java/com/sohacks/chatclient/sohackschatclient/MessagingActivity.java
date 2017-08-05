@@ -23,7 +23,9 @@ import com.sohacks.chatclient.sohackschatclient.Domain.UserMessage;
 import com.sohacks.chatclient.sohackschatclient.Domain.UserMessageArray;
 import com.sohacks.chatclient.sohackschatclient.Util.KeyboardUtility;
 import com.sohacks.chatclient.sohackschatclient.Util.RandomNumberGenerator;
+import com.sohacks.chatclient.sohackschatclient.Util.StringValidator;
 
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -37,6 +39,11 @@ public class MessagingActivity extends AppCompatActivity {
     @BindView(R.id.message_text) EditText messageText;
     @BindView(R.id.send_button) Button sendButton;
     @BindView(R.id.message_list_view) ListView messageListView;
+    @BindString(R.string.invalid_message_title) String invalidMsgTitle;
+    @BindString(R.string.invalid_message_string) String invalidMsgString;
+    @BindString(R.string.ok_string) String okString;
+    @BindString(R.string.chat_lobby_title) String chatLobbyTitle;
+    @BindString(R.string.messages_ref) String firebaseMessagesString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +55,7 @@ public class MessagingActivity extends AppCompatActivity {
         createButtonListeners();
         attachCloseKeyBoardListeners(findViewById(R.id.message_parent));
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-        setTitle("Chat Lobby");
+        setTitle(chatLobbyTitle);
     }
 
     /**
@@ -57,7 +64,7 @@ public class MessagingActivity extends AppCompatActivity {
      */
     private void createFirebaseConnections(){
         database = FirebaseDatabase.getInstance();
-        messageReference = database.getReference("messages");
+        messageReference = database.getReference(firebaseMessagesString);
 
         ValueEventListener messageListener = new ValueEventListener() {
             @Override
@@ -134,7 +141,7 @@ public class MessagingActivity extends AppCompatActivity {
      */
     private void sendMessageToFirebase(){
 
-        if(validateMessage()){
+        if(StringValidator.validateStringForEmpty(messageText.getText().toString())){
 
             Long tsLong = System.currentTimeMillis()/1000;
             String ts = tsLong.toString();
@@ -153,27 +160,13 @@ public class MessagingActivity extends AppCompatActivity {
     }
 
     /**
-     * Validates the message by simply checking if it is empty
-     * @return Boolean if not empty
-     */
-    private boolean validateMessage(){
-        String message = messageText.getText().toString();
-
-        if(message.length() == 0){
-            return false;
-        }
-
-        return true;
-    }
-
-    /**
      * Displays a simple ok alert for an invalid message
      */
     private void displayInvalidMessageAlert(){
         AlertDialog alertDialog = new AlertDialog.Builder(MessagingActivity.this).create();
-        alertDialog.setTitle("Invalid Message");
-        alertDialog.setMessage("A message must not be empty.");
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+        alertDialog.setTitle(invalidMsgTitle);
+        alertDialog.setMessage(invalidMsgString);
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, okString,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -181,6 +174,4 @@ public class MessagingActivity extends AppCompatActivity {
                 });
         alertDialog.show();
     }
-
-
 }

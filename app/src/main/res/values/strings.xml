@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">SoHacksChatClient</string>
     <string name="username_placeholder">Enter Username</string>
+
+    <string name="ok_string">OK</string>
+
+    <string name="invalid_username_title">Invalid Username</string>
+    <string name="invalid_username_string">A valid username must be entered to proceed</string>
+
+    <string name="invalid_message_title">Invalid Message</string>
+    <string name="invalid_message_string">A message must not be empty.</string>
+
+    <!--Titles-->
+    <string name="chat_lobby_title">Chat Lobby</string>
+
+    <!--Firebase constants-->
+    <string name="messages_ref">messages</string>
+
 </resources>
