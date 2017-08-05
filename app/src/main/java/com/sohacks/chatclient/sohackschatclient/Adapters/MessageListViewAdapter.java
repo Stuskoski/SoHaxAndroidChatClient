@@ -37,8 +37,23 @@ public class MessageListViewAdapter extends ArrayAdapter<UserMessage> {
         this.mMessages = messages;
     }
 
+    /**
+     *
+     * Constructs a view if it is not present in memory
+     *
+     * The view is constructed with the UserMessage array
+     * acting as the data source.
+     *
+     * All subviews are then filled out with data and the
+     * super view is returned.
+     *
+     * @param position Position of the row
+     * @param view Super view to be return after configured
+     * @param viewGroup The view group or section
+     * @return Configured super view
+     */
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(int position, View view, ViewGroup viewGroup) {
 
         if(view == null){
             LayoutInflater inflater;
@@ -46,7 +61,7 @@ public class MessageListViewAdapter extends ArrayAdapter<UserMessage> {
             view = inflater.inflate(R.layout.message_adapter_list, null);
         }
 
-        UserMessage message = getItem(i);
+        UserMessage message = getItem(position);
 
         if(message != null){
 

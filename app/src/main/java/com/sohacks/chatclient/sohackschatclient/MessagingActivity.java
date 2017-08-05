@@ -24,8 +24,6 @@ import com.sohacks.chatclient.sohackschatclient.Domain.UserMessageArray;
 import com.sohacks.chatclient.sohackschatclient.Util.KeyboardUtility;
 import com.sohacks.chatclient.sohackschatclient.Util.RandomNumberGenerator;
 
-import java.util.Date;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -138,7 +136,10 @@ public class MessagingActivity extends AppCompatActivity {
 
         if(validateMessage()){
 
-            String newChild = String.format("%d-%d", new Date(), new RandomNumberGenerator().generateMessageID());
+            Long tsLong = System.currentTimeMillis()/1000;
+            String ts = tsLong.toString();
+
+            String newChild = String.format("%s-%d", ts, new RandomNumberGenerator().generateMessageID());
 
             messageReference
                     .child(newChild)
